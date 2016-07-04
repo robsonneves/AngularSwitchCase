@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-App="myApp">
+	<head>
+		<title> Exemplo Switch </title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/myAppCtrl.js"></script>
+	</head>
+	<body ng-controller="myAppCtrl">
+		<div class="jumbotron">
+			<div ng-switch="content">
+			    <div ng-switch-when="1">
+					<div ng-include="'contentUm.html'"></div>
+				</div>
+				<div ng-switch-when="2">
+					<div ng-include="'contentDois.html'"></div>
+				</div>
+				<div ng-switch-default>
+					<div ng-include="'contentDefault.html'"></div>
+				 </div>
+			</div>	
+		</div>
+	</body>
+</html>
